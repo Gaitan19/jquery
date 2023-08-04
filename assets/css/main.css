@@ -9329,16 +9329,62 @@ h1, .h1, h2, .h2, h3, .h3 {
   width: 100%; }
   .Style-container {
     display: flex;
-    gap: 20px; }
+    gap: 20px;
+    justify-content: center;
+    max-width: 1108px;
+    overflow: hidden; }
+    .Style-container-text {
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 1px;
+      padding: 15px;
+      position: absolute;
+      top: 375px; }
+  .Style-previous {
+    background: #0000;
+    border-radius: 4px;
+    box-shadow: 1px 2px 15px 2px rgba(0, 0, 0, 0.14);
+    color: #2c5364;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    left: 374px;
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    top: 250px;
+    transform: translate(0, -50%);
+    transition: all 0.4s ease;
+    width: 40px;
+    z-index: 1; }
+  .Style-next {
+    background: #0000;
+    border-radius: 4px;
+    box-shadow: 1px 2px 15px 2px rgba(0, 0, 0, 0.14);
+    color: #2c5364;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    right: 374px;
+    top: 250px;
+    transform: translate(0, -50%);
+    transition: all 0.4s ease;
+    width: 40px;
+    z-index: 1; }
   .Style-shoes-box {
     align-items: center;
     background: black;
     background-color: #000909;
     border-radius: 15px;
+    display: flex;
     flex-direction: column;
-    height: 170px;
-    height: 496px;
-    justify-content: center;
+    height: 438px;
+    min-width: 356px;
     width: 356px; }
   .Style-circle {
     background: #d6d57f;
@@ -9351,14 +9397,19 @@ h1, .h1, h2, .h2, h3, .h3 {
     top: 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    width: 100%;
-    z-index: 0; }
+    width: 100%; }
   .Style-shoes {
-    bottom: 428px;
     margin-left: 33px;
-    position: relative;
+    position: absolute;
+    top: 103px;
     -webkit-transform: rotate(-25deg) scale(1);
     -webkit-transition: 0.5s;
     width: 277px; }
+  .Style-nike {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600; }
+  .Style-active {
+    display: none; }
 
 /*# sourceMappingURL=main.css.map */
