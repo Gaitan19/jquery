@@ -252,3 +252,29 @@ color:$color-green-dark;
 .stars {
     color:$default-color-dark-orange;
 }
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.cards-container {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}

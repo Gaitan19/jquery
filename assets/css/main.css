@@ -9545,4 +9545,26 @@ h1, .h1, h2, .h2, h3, .h3 {
 .stars {
   color: #f89b1c; }
 
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  z-index: 1; }
+
+.carousel-btn.prev {
+  left: 10px; }
+
+.carousel-btn.next {
+  right: 10px; }
+
+.cards-container {
+  display: flex;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; }
+
 /*# sourceMappingURL=main.css.map */
