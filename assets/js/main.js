@@ -12,7 +12,6 @@ $(document).ready(function () {
         main: function () {
             this.cacheDom();
             this.bindEvents();
-            this.bindCarouselEvents();
         },
 
         bindEvents: function () {
@@ -40,7 +39,7 @@ $(document).ready(function () {
                         parrafoVisible.addClass('parrafo-visible');
                         parrafo1Visible.addClass('parrafo-1-visible');
                         parrafo10Visible.addClass('parrafo-1-0-visible');
-                    }, 500); // Ajusta este valor según el tiempo de la transición de los botones
+                    }, 500); 
                 });
 
                 $(this).on('mouseleave', () => {
@@ -52,33 +51,7 @@ $(document).ready(function () {
             });
         },
 
-        bindCarouselEvents: function () {
-            const cardsContainer = $('.cards-container');
-            const cards = $('.BodyMain-card');
-
-            const cardWidth = cards.first().outerWidth(true);
-            const cardsToShow = Math.floor(cardsContainer.width() / cardWidth);
-
-            let currentIndex = 0;
-
-            $('.carousel-btn.next').on('click', function () {
-                if (currentIndex < cards.length - cardsToShow) {
-                    currentIndex++;
-                    cardsContainer.animate({
-                        left: -currentIndex * cardWidth
-                    }, 500); // Ajusta el valor de la duración de la animación si es necesario
-                }
-            });
-
-            $('.carousel-btn.prev').on('click', function () {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    cardsContainer.animate({
-                        left: -currentIndex * cardWidth
-                    }, 500); // Ajusta el valor de la duración de la animación si es necesario
-                }
-            });
-        },
+       
 
 
     };
