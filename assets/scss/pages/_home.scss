@@ -1,161 +1,166 @@
+
+
 .BodyMain {
-    width: 100%;
     height: auto;
+    width: 100%;
 
     &-radio {
-        content: '';
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
         background: $point-baground;
         border-radius: 15px;
-        z-index: 0;
         -webkit-clip-path: circle(150px at 80% 20%);
         clip-path: circle(150px at 80% 20%);
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
-       
-    } 
-
-    .BodyMain-card:hover &-radio {
-
-        content: '';
+        content: "";
+        height: 100%;
         left: 0;
         top: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         width: 100%;
-        height: 304%;
+        z-index: 0;
+    }
+
+    .BodyMain-card:hover &-radio {
         background: #d6d57f;
         border-radius: 15px;
-        z-index: 0;
         -webkit-clip-path: circle(151px at 132% 65%);
         clip-path: circle(252px at 68% -5%);
+
+        content: "";
+        height: 304%;
+        left: 0;
+        top: 0;
         -webkit-transition: all -20.7s ease-out;
-        transition: all .3s ease-in-out;
-    
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        z-index: 0;
     }
 
     &-title {
-        display: flex;
-        justify-content: center;
         align-items: center;
         color: $text-white;
-        margin-top: 30px;
         color: $title-sky-color;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
     }
 
     &-container {
-        display: flex;
-        margin-right: auto;
-        margin-left: auto;
-        position: relative;
-        max-width: 1140px;
-        height: 502px;
-        margin-top: 82px;
-        gap: 24px;
         align-items: center;
+        display: flex;
+        gap: 24px;
+        height: 502px;
         justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 82px;
+        max-width: 1140px;
+        position: relative;
     }
 
     &-card {
-        height: 435px;
+        align-items: center;
         background-color: $text-black;
-        width: 356px;
         border-radius: 15px;
         flex-direction: column;
+        height: 435px;
         justify-content: center;
-        align-items: center;
+        min-width: 356px;
         position: relative;
+        width: 356px;
 
         &-shoes {
-            width: 255px;
-            position: absolute;
             bottom: 273px;
             margin-left: 33px;
+            position: absolute;
             transform: rotate(-25deg);
             transform: scale(1) rotate(-25deg);
-
+            width: 255px;
         }
 
         &-efects {
-            -webkit-transition: all .9s ease; /* Safari y Chrome */
-            -moz-transition: all .9s ease; /* Firefox */
-            -o-transition: all .9s ease; /* IE 9 */
-            -ms-transition: all .9s ease; /* Opera */
             transform: scale(1.25) rotate(-25deg);
+            -webkit-transition: all 0.9s ease; 
+            -moz-transition: all 0.9s ease; 
+            -o-transition: all 0.9s ease; 
+            -ms-transition: all 0.9s ease; 
         }
     }
 
     &-text {
-        position: absolute;
         bottom: 87px;
-        width: 100%;
         display: flex;
         justify-content: center;
+        position: absolute;
+        width: 100%;
 
         &-title {
-            color: $text-white;
-            font-size: 30px;
-            position: absolute;
             bottom: -6px;
+            color: $text-white;
             font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
             font-weight: 800;
+            position: absolute;
             transition: bottom 0.5s ease;
         }
 
         .BodyMain-card:hover &-title {
-             bottom: 85px;
+            bottom: 85px;
         }
 
         &-button {
-            position: absolute;
             bottom: -61px;
-            left: 0;
-            right: 0;
             display: flex;
             justify-content: center;
+            left: 0;
             opacity: 0;
-            transition: opacity 0.5s, transform 0.5s;
+            position: absolute;
+            right: 0;
             transform: translateY(100%);
+            transition: opacity 0.5s, transform 0.5s;
         }
     }
 
     &-paragraph {
-        color: white;
-        font-size: 15px;
-        position: absolute;
-
         bottom: -6px;
+        color: white;
         font-family: Arial, Helvetica, sans-serif;
-        font-weight: 800; 
+        font-size: 15px;
+        font-weight: 800;
+        position: absolute;
     }
 }
 
-.BodyMain-card {
-   
+
+.cards-container {
+    display: flex;
+    gap: 9px;
+    max-width: 1087px;
+    overflow: hidden;
+    
 }
 
+
 .buttons-container {
-    position: absolute;
     bottom: -61px;
-    left: 0;
-    right: 0;
     display: flex;
     justify-content: center;
+    left: 0;
     opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
+    position: absolute;
+    right: 0;
     transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
 }
 
 .slide-from-bottom {
-    padding: 10px 20px;
     background-color: $text-white;
-    color: $text-black;
     border: none;
     border-radius: 8px;
-    font-weight: 800; ;
+    color: $text-black;
     cursor: pointer;
+    font-weight: 800;
     margin: 5px;
+    padding: 10px 20px;
 }
 
 .buttons-container.active {
@@ -164,44 +169,43 @@
 }
 
 .parrafo {
+    align-items: center;
+    bottom: 43px;
+    color: $text-white;
+    color: $text-white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: $text-white;
     position: absolute;
-    color: $text-white;
-    bottom: 43px;
 }
 
 .parrafo-1 {
+    align-items: center;
+    bottom: 17px;
+    color: $text-white;
+    color: $text-white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: $text-white;
     position: absolute;
-    color: $text-white;
-    bottom: 17px;
 }
 
 .parrafo-1-0 {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    color: $text-white;
-    position: absolute;
-    color: $text-white;
-    gap: 3px;
-    font-weight: 700;
     bottom: -18px;
+    color: $text-white;
+    color: $text-white;
+    display: flex;
+    font-weight: 700;
+    gap: 3px;
+    justify-content: center;
+    position: absolute;
 }
 
 .parrafo-1-1 {
-display: flex;
-font-size: 30px;
-gap: 5px;
-margin-top: 5px;
-color:$color-green-dark;
-
+    color: $color-green-dark;
+    display: flex;
+    font-size: 30px;
+    gap: 5px;
+    margin-top: 5px;
 }
 
 .parrafo-1-2 {
@@ -211,57 +215,53 @@ color:$color-green-dark;
 .parrafo,
 .parrafo-1,
 .parrafo-1-0 {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .BodyMain-card:hover .parrafo-visible,
 .BodyMain-card:hover .parrafo-1-visible,
 .BodyMain-card:hover .parrafo-1-0-visible {
-  opacity: 1;
+    opacity: 1;
 }
 
-
 .buttons-container {
-    // ... (otros estilos existentes)
     opacity: 0;
-    transition: opacity 0.5s, transform 0.5s;
     transform: translateY(100%);
-  }
-  
-  .BodyMain-card:hover .buttons-container {
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.BodyMain-card:hover .buttons-container {
     opacity: 1;
     transform: translateY(0);
-  }
-    
+}
 
-  .parrafo,
-  .parrafo-1,
-  .parrafo-1-0 {
+.parrafo,
+.parrafo-1,
+.parrafo-1-0 {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-  }
-  
-  .BodyMain-card:hover .parrafo-visible,
-  .BodyMain-card:hover .parrafo-1-visible,
-  .BodyMain-card:hover .parrafo-1-0-visible {
-    opacity: 1;
-  }
+}
 
+.BodyMain-card:hover .parrafo-visible,
+.BodyMain-card:hover .parrafo-1-visible,
+.BodyMain-card:hover .parrafo-1-0-visible {
+    opacity: 1;
+}
 
 .stars {
-    color:$default-color-dark-orange;
+    color: $default-color-dark-orange;
 }
 
 .carousel-btn {
+    background: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 24px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    font-size: 24px;
-    color: black;
-    cursor: pointer;
     z-index: 1;
 }
 
@@ -273,8 +273,4 @@ color:$color-green-dark;
     right: 10px;
 }
 
-.cards-container {
-    display: flex;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
+

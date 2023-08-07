@@ -6,13 +6,20 @@ $(document).ready(function () {
             this.parrafo = $('.parrafo');
             this.parrafo1 = $('.parrafo-1');
             this.parrafo10 = $('.parrafo-1-0');
-            
+           
+
         },
 
         main: function () {
             this.cacheDom();
             this.bindEvents();
+            // console.log('container :>> ', this.container);
+            // console.log('item :>> ', this.item);
+            // console.log('next :>> ', this.next);
+            // console.log('previous :>> ', this.previous);
         },
+
+        
 
         bindEvents: function () {
             this.functionalities.each(function () {
@@ -39,7 +46,7 @@ $(document).ready(function () {
                         parrafoVisible.addClass('parrafo-visible');
                         parrafo1Visible.addClass('parrafo-1-visible');
                         parrafo10Visible.addClass('parrafo-1-0-visible');
-                    }, 500); 
+                    }, 500);
                 });
 
                 $(this).on('mouseleave', () => {
@@ -49,9 +56,9 @@ $(document).ready(function () {
                     parrafo10Visible.removeClass('parrafo-1-0-visible');
                 });
             });
-        },
 
-       
+            
+        },
 
 
     };
