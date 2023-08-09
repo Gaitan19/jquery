@@ -53,4 +53,3 @@ autoMove();
     previous.click(movePrevious);
 
 });
-
